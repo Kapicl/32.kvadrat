@@ -11,15 +11,15 @@ clock = pygame.time.Clock()
 running = True
 while running:
     screen.fill((0, 0, 0))
-    rect_size = 190
+    size = 190
     center_x, center_y = WIDTH // 2, HEIGHT // 2
 
     for i in range(19):
         color = random.choice(colors)
-        rect_x = center_x - rect_size // 2
-        rect_y = center_y - rect_size // 2
-        pygame.draw.rect(screen, color, (rect_x, rect_y, rect_size, rect_size), 3)
-        rect_size -= 10
+        rect_x = center_x - size // 2
+        rect_y = center_y - size // 2
+        pygame.draw.rect(screen, color, (rect_x, rect_y, size, size), 3)
+        size -= 10
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
